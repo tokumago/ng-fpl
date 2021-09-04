@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+}
+
+.player-image {
+    width: 45px;
+}
+
+.mat-cell {
+    width: fit-content;
+    color: #655e5e;
+    &:hover {
+        color: black;
+    }
+}

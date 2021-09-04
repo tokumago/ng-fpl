@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "http://fantasy.premierleague.com/",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

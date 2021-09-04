@@ -1,0 +1,76 @@
+<div class="players">
+    <table  mat-table [dataSource]="playersList" class="mat-elevation-z8">
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- image Column -->
+        <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element"> 
+                <img 
+                    src="https://resources.premierleague.com/premierleague/photos/players/110x140/p{{ element.code }}.png" 
+                    alt="player image"
+                    class="player-image"
+                >
+            </td>
+        </ng-container>
+        
+              <!-- Position Column -->
+        <ng-container matColumnDef="first_name">
+            <th mat-header-cell *matHeaderCellDef> First name </th>
+            <td mat-cell *matCellDef="let element"> {{ element.first_name }} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="second_name">
+            <th mat-header-cell *matHeaderCellDef> Second name </th>
+            <td mat-cell *matCellDef="let element"> {{ element.second_name }} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="now_cost">
+            <th mat-header-cell *matHeaderCellDef> Now cost </th>
+            <td mat-cell *matCellDef="let element"> ${{ element.now_cost }} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="total">
+            <th mat-header-cell *matHeaderCellDef> Total </th>
+            <td mat-cell *matCellDef="let element"> {{ element.total_points }}pts </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="minutes">
+            <th mat-header-cell *matHeaderCellDef> Minutes </th>
+            <td mat-cell *matCellDef="let element"> {{ element.minutes }} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="goals_score">
+            <th mat-header-cell *matHeaderCellDef> Goals scored </th>
+            <td mat-cell *matCellDef="let element"> {{ element.goals_score }} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="assists">
+            <th mat-header-cell *matHeaderCellDef> Assists </th>
+            <td mat-cell *matCellDef="let element"> {{ element.assists }} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="clean_sheets">
+            <th mat-header-cell *matHeaderCellDef> Clean sheets </th>
+            <td mat-cell *matCellDef="let element"> {{ element.clean_sheets }} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="goals_scored">
+            <th mat-header-cell *matHeaderCellDef> Goals scored </th>
+            <td mat-cell *matCellDef="let element"> {{ element.goals_scored }} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="own_goals">
+            <th mat-header-cell *matHeaderCellDef> Own goals </th>
+            <td mat-cell *matCellDef="let element"> {{ element.own_goals }} </td>
+        </ng-container>
+
+        <tr  mat-header-row  *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr sticky mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
